@@ -1,0 +1,57 @@
+=== AVL Tree Insertion Verbose Output ===
+
+
+=== Inserting Student 1 ===
+Roll Number: 101, Name: Alice, Total: 433
+  -> Creating new node for Roll Number: 101
+  -> Insertion completed
+
+=== Inserting Student 2 ===
+Roll Number: 103, Name: Charlie, Total: 452
+  -> Comparing with node (Roll: 101)
+  -> Going RIGHT
+  -> Creating new node for Roll Number: 103
+  -> Balance factor: -1
+  -> Insertion completed
+
+=== Inserting Student 3 ===
+Roll Number: 102, Name: Bob, Total: 404
+  -> Comparing with node (Roll: 101)
+  -> Going RIGHT
+  -> Comparing with node (Roll: 103)
+  -> Going LEFT
+  -> Creating new node for Roll Number: 102
+  -> Balance factor: 1
+  -> Balance factor: -2
+  -> Right-Left case detected
+  -> Performing RIGHT ROTATION on node (Roll: 103)
+  -> Performing LEFT ROTATION on node (Roll: 101)
+  -> Insertion completed
+
+=== Inserting Student 4 ===
+Roll Number: 105, Name: Eve, Total: 456
+  -> Comparing with node (Roll: 102)
+  -> Going RIGHT
+  -> Comparing with node (Roll: 103)
+  -> Going RIGHT
+  -> Creating new node for Roll Number: 105
+  -> Balance factor: -1
+  -> Balance factor: -1
+  -> Insertion completed
+
+=== Inserting Student 5 ===
+Roll Number: 104, Name: David, Total: 394
+  -> Comparing with node (Roll: 102)
+  -> Going RIGHT
+  -> Comparing with node (Roll: 103)
+  -> Going RIGHT
+  -> Comparing with node (Roll: 105)
+  -> Going LEFT
+  -> Creating new node for Roll Number: 104
+  -> Balance factor: 1
+  -> Balance factor: -2
+  -> Right-Left case detected
+  -> Performing RIGHT ROTATION on node (Roll: 105)
+  -> Performing LEFT ROTATION on node (Roll: 103)
+  -> Balance factor: -1
+  -> Insertion completed

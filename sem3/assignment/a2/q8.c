@@ -23,10 +23,8 @@ void findLongestSubarray(int arr[], int n, int target) {
                     startIndex = i;
                     endIndex = j;
                 }
-            } else {
-                break; // Since array can have negative numbers, we continue
-                // But if all positive, we can break here
             }
+            // Continue even if currentSum > target because subsequent negative numbers might reduce the sum
         }
     }
     

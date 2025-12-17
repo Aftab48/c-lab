@@ -73,13 +73,10 @@ int main() {
         scanf("%d", &data);
         root = createNode(data);
         
-        printf("Building tree...\n");
-        printf("For each node, enter:\n");
-        printf("  -1 to skip left child\n");
-        printf("  -2 to skip right child\n");
-        printf("  value to set as child\n");
+        printf("Building tree (BST insertion method used for simplicity)...\n");
+        printf("Enter values for remaining %d nodes:\n", n - 1);
         
-        // Simple tree building (level order would be better, but this is simpler)
+        // Simple tree building (BST insertion)
         for (int i = 1; i < n; i++) {
             printf("Enter value for node %d: ", i + 1);
             scanf("%d", &data);

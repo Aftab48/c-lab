@@ -7,15 +7,15 @@
 // Method 1: Using sum formula
 int findMissingNumberSum(int arr[], int n) {
     // Expected sum of numbers from 1 to n+1
-    int expectedSum = (n + 1) * (n + 2) / 2;
+    long long expectedSum = (long long)(n + 1) * (n + 2) / 2;
     
     // Actual sum of array elements
-    int actualSum = 0;
+    long long actualSum = 0;
     for (int i = 0; i < n; i++) {
         actualSum += arr[i];
     }
     
-    return expectedSum - actualSum;
+    return (int)(expectedSum - actualSum);
 }
 
 // Method 2: Using XOR

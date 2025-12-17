@@ -168,7 +168,11 @@ int main() {
     
     printf("Bubble Sort Time: %f seconds\n", bubbleTime);
     printf("qsort Time: %f seconds\n", qsortTime);
-    printf("Performance Ratio: %.2fx\n\n", bubbleTime / qsortTime);
+    if (qsortTime > 0) {
+        printf("Performance Ratio: %.2fx\n\n", bubbleTime / qsortTime);
+    } else {
+        printf("Performance Ratio: Cannot calculate (too fast)\n\n");
+    }
     
     // Reset for name sorting
     for (int i = 0; i < n; i++) {
@@ -193,7 +197,11 @@ int main() {
     
     printf("Bubble Sort Time: %f seconds\n", bubbleTime);
     printf("qsort Time: %f seconds\n", qsortTime);
-    printf("Performance Ratio: %.2fx\n\n", bubbleTime / qsortTime);
+    if (qsortTime > 0) {
+        printf("Performance Ratio: %.2fx\n\n", bubbleTime / qsortTime);
+    } else {
+        printf("Performance Ratio: Cannot calculate (too fast)\n\n");
+    }
     
     // Reset for total sorting
     for (int i = 0; i < n; i++) {
@@ -218,7 +226,11 @@ int main() {
     
     printf("Bubble Sort Time: %f seconds\n", bubbleTime);
     printf("qsort Time: %f seconds\n", qsortTime);
-    printf("Performance Ratio: %.2fx\n\n", bubbleTime / qsortTime);
+    if (qsortTime > 0) {
+        printf("Performance Ratio: %.2fx\n\n", bubbleTime / qsortTime);
+    } else {
+        printf("Performance Ratio: Cannot calculate (too fast)\n\n");
+    }
     
     return 0;
 }

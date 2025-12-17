@@ -1,0 +1,65 @@
+=== MST ALGORITHMS DEBUG TRACE ===
+Debug Level: 2
+
+Graph:
+Vertices: 5, Edges: 7
+Adjacency Matrix:
+0 2 0 6 0 
+2 0 3 8 5 
+0 3 0 0 7 
+6 8 0 0 9 
+0 5 7 9 0 
+
+=== KRUSKAL'S ALGORITHM ===
+Sorted edges by weight:
+  Edge 0-1: weight 2
+  Edge 1-2: weight 3
+  Edge 1-4: weight 5
+  Edge 0-3: weight 6
+  Edge 2-4: weight 7
+  Edge 1-3: weight 8
+  Edge 3-4: weight 9
+
+Processing edges:
+  Checking edge 0-1 (weight: 2)
+    Root of 0: 0, Root of 1: 1
+    -> Added to MST
+  Checking edge 1-2 (weight: 3)
+    Root of 1: 0, Root of 2: 2
+    -> Added to MST
+  Checking edge 1-4 (weight: 5)
+    Root of 1: 0, Root of 4: 4
+    -> Added to MST
+  Checking edge 0-3 (weight: 6)
+    Root of 0: 0, Root of 3: 3
+    -> Added to MST
+
+MST Edges:
+  0 - 1 : 2
+  1 - 2 : 3
+  1 - 4 : 5
+  0 - 3 : 6
+Total MST Weight: 16
+
+=== PRIM'S ALGORITHM ===
+Initialization:
+  Starting vertex: 0
+
+Iteration 1: Selected vertex 0
+  Updated key[1] = 2, parent[1] = 0
+  Updated key[3] = 6, parent[3] = 0
+
+Iteration 2: Selected vertex 1
+  Updated key[2] = 3, parent[2] = 1
+  Updated key[4] = 5, parent[4] = 1
+
+Iteration 3: Selected vertex 2
+
+Iteration 4: Selected vertex 4
+
+MST Edges:
+  0 - 1 : 2
+  1 - 2 : 3
+  0 - 3 : 6
+  1 - 4 : 5
+Total MST Weight: 16

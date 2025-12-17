@@ -25,6 +25,11 @@ int main() {
     printf("Enter the number of elements: ");
     scanf("%d", &n);
     
+    if (n <= 0) {
+        printf("Array is empty\n");
+        return 0;
+    }
+    
     int arr[n];
     printf("Enter %d elements: ", n);
     for (int i = 0; i < n; i++) {

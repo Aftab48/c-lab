@@ -1,0 +1,8 @@
+In-order Traversal (Left -> Root -> Right)
+Roll Number	Name	Total
+----------------------------------------
+101 Alice 433
+102 Bob 404
+103 Charlie 452
+104 David 394
+105 Eve 456

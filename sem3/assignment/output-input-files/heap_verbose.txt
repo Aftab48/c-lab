@@ -1,0 +1,51 @@
+=== Heap Insertion Verbose Output ===
+
+
+=== Inserting Student 1 ===
+Roll Number: 101, Name: Alice, Total: 433
+  -> Inserting at index 0
+  -> Insertion completed, heap size: 1
+  -> Current heap structure:
+    [0] Roll: 101, Name: Alice
+
+=== Inserting Student 2 ===
+Roll Number: 103, Name: Charlie, Total: 452
+  -> Inserting at index 1
+  -> Comparing with parent (Roll: 101)
+  -> Insertion completed, heap size: 2
+  -> Current heap structure:
+    [0] Roll: 101, Name: Alice
+    [1] Roll: 103, Name: Charlie
+
+=== Inserting Student 3 ===
+Roll Number: 102, Name: Bob, Total: 404
+  -> Inserting at index 2
+  -> Comparing with parent (Roll: 101)
+  -> Insertion completed, heap size: 3
+  -> Current heap structure:
+    [0] Roll: 101, Name: Alice
+    [1] Roll: 103, Name: Charlie
+    [2] Roll: 102, Name: Bob
+
+=== Inserting Student 4 ===
+Roll Number: 105, Name: Eve, Total: 456
+  -> Inserting at index 3
+  -> Comparing with parent (Roll: 103)
+  -> Insertion completed, heap size: 4
+  -> Current heap structure:
+    [0] Roll: 101, Name: Alice
+    [1] Roll: 103, Name: Charlie
+    [2] Roll: 102, Name: Bob
+    [3] Roll: 105, Name: Eve
+
+=== Inserting Student 5 ===
+Roll Number: 104, Name: David, Total: 394
+  -> Inserting at index 4
+  -> Comparing with parent (Roll: 103)
+  -> Insertion completed, heap size: 5
+  -> Current heap structure:
+    [0] Roll: 101, Name: Alice
+    [1] Roll: 103, Name: Charlie
+    [2] Roll: 102, Name: Bob
+    [3] Roll: 105, Name: Eve
+    [4] Roll: 104, Name: David

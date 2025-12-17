@@ -1,0 +1,12 @@
+Postfix Expression Evaluation Results
+=====================================
+
+Expression: 2 3 4 * +
+Result: 14
+
+Expression: 5 6 + 7 *
+Result: 77
+
+Expression: 10 2 3 * +
+Result: 16
+

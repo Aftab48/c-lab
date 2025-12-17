@@ -1,0 +1,169 @@
+=== STACK OPERATIONS DEBUG TRACE ===
+Debug Level: 2
+
+=== POSTFIX EXPRESSION EVALUATION ===
+Expression: 2 3 4 * +
+
+Processing character: '2'
+  [DEBUG] Pushed 2 onto stack. Top: 0
+  Operand: 2
+
+Processing character: ' '
+
+Processing character: '3'
+  [DEBUG] Pushed 3 onto stack. Top: 1
+  Operand: 3
+
+Processing character: ' '
+
+Processing character: '4'
+  [DEBUG] Pushed 4 onto stack. Top: 2
+  Operand: 4
+
+Processing character: ' '
+
+Processing character: '*'
+  Operator: *
+  [DEBUG] Popped 4 from stack. Top: 1
+  [DEBUG] Popped 3 from stack. Top: 0
+  Operands: 3 * 4
+  [DEBUG] Pushed 12 onto stack. Top: 1
+  Result: 12
+
+Processing character: ' '
+
+Processing character: '+'
+  Operator: +
+  [DEBUG] Popped 12 from stack. Top: 0
+  [DEBUG] Popped 2 from stack. Top: -1
+  Operands: 2 + 12
+  [DEBUG] Pushed 14 onto stack. Top: 0
+  Result: 14
+  [DEBUG] Popped 14 from stack. Top: -1
+
+Final Result: 14
+
+=== POSTFIX EXPRESSION EVALUATION ===
+Expression: 5 6 + 7 *
+
+Processing character: '5'
+  [DEBUG] Pushed 5 onto stack. Top: 0
+  Operand: 5
+
+Processing character: ' '
+
+Processing character: '6'
+  [DEBUG] Pushed 6 onto stack. Top: 1
+  Operand: 6
+
+Processing character: ' '
+
+Processing character: '+'
+  Operator: +
+  [DEBUG] Popped 6 from stack. Top: 0
+  [DEBUG] Popped 5 from stack. Top: -1
+  Operands: 5 + 6
+  [DEBUG] Pushed 11 onto stack. Top: 0
+  Result: 11
+
+Processing character: ' '
+
+Processing character: '7'
+  [DEBUG] Pushed 7 onto stack. Top: 1
+  Operand: 7
+
+Processing character: ' '
+
+Processing character: '*'
+  Operator: *
+  [DEBUG] Popped 7 from stack. Top: 0
+  [DEBUG] Popped 11 from stack. Top: -1
+  Operands: 11 * 7
+  [DEBUG] Pushed 77 onto stack. Top: 0
+  Result: 77
+  [DEBUG] Popped 77 from stack. Top: -1
+
+Final Result: 77
+
+=== POSTFIX EXPRESSION EVALUATION ===
+Expression: 10 2 3 * +
+
+Processing character: '1'
+  [DEBUG] Pushed 10 onto stack. Top: 0
+  Operand: 10
+
+Processing character: ' '
+
+Processing character: '2'
+  [DEBUG] Pushed 2 onto stack. Top: 1
+  Operand: 2
+
+Processing character: ' '
+
+Processing character: '3'
+  [DEBUG] Pushed 3 onto stack. Top: 2
+  Operand: 3
+
+Processing character: ' '
+
+Processing character: '*'
+  Operator: *
+  [DEBUG] Popped 3 from stack. Top: 1
+  [DEBUG] Popped 2 from stack. Top: 0
+  Operands: 2 * 3
+  [DEBUG] Pushed 6 onto stack. Top: 1
+  Result: 6
+
+Processing character: ' '
+
+Processing character: '+'
+  Operator: +
+  [DEBUG] Popped 6 from stack. Top: 0
+  [DEBUG] Popped 10 from stack. Top: -1
+  Operands: 10 + 6
+  [DEBUG] Pushed 16 onto stack. Top: 0
+  Result: 16
+  [DEBUG] Popped 16 from stack. Top: -1
+
+Final Result: 16
+
+=== STOCK SPAN PROBLEM ===
+Prices: 100 80 60 70 60 75 85 
+  [DEBUG] Pushed 0 onto stack. Top: 0
+Day 0: Price = 100, Span = 1 (first day)
+
+Day 1: Price = 80
+  Top of stack: index 0 (price: 100), span = 1
+  [DEBUG] Pushed 1 onto stack. Top: 1
+
+Day 2: Price = 60
+  Top of stack: index 1 (price: 80), span = 1
+  [DEBUG] Pushed 2 onto stack. Top: 2
+
+Day 3: Price = 70
+  [DEBUG] Popped 2 from stack. Top: 1
+  Popped index 2 (price: 60) as it's <= current price
+  Top of stack: index 1 (price: 80), span = 2
+  [DEBUG] Pushed 3 onto stack. Top: 2
+
+Day 4: Price = 60
+  Top of stack: index 3 (price: 70), span = 1
+  [DEBUG] Pushed 4 onto stack. Top: 3
+
+Day 5: Price = 75
+  [DEBUG] Popped 4 from stack. Top: 2
+  Popped index 4 (price: 60) as it's <= current price
+  [DEBUG] Popped 3 from stack. Top: 1
+  Popped index 3 (price: 70) as it's <= current price
+  Top of stack: index 1 (price: 80), span = 4
+  [DEBUG] Pushed 5 onto stack. Top: 2
+
+Day 6: Price = 85
+  [DEBUG] Popped 5 from stack. Top: 1
+  Popped index 5 (price: 75) as it's <= current price
+  [DEBUG] Popped 1 from stack. Top: 0
+  Popped index 1 (price: 80) as it's <= current price
+  Top of stack: index 0 (price: 100), span = 6
+  [DEBUG] Pushed 6 onto stack. Top: 1
+
+Final Spans: 1 1 1 2 1 4 6 

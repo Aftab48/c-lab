@@ -67,8 +67,8 @@ void printList(struct Node* head, int maxNodes) {
         temp = temp->next;
         count++;
     }
-    if (count >= maxNodes) {
-        printf("... (cycle detected)\n");
+    if (count >= maxNodes && temp != NULL) {
+        printf("... (cycle detected or limit reached)\n");
     } else {
         printf("NULL\n");
     }

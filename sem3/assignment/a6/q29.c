@@ -89,6 +89,19 @@ void freeTree(struct Node* root) {
     }
 }
 
+// Helper to check if two trees are identical structure-wise
+int areIdentical(struct Node* root1, struct Node* root2) {
+    if (root1 == NULL && root2 == NULL) {
+        return 1;
+    }
+    if (root1 != NULL && root2 != NULL) {
+        return (root1->data == root2->data &&
+                areIdentical(root1->left, root2->left) &&
+                areIdentical(root1->right, root2->right));
+    }
+    return 0;
+}
+
 int main() {
     // Create a binary tree
     struct Node* root = createNode(1);
@@ -131,7 +144,7 @@ int main() {
     // Verify
     printf("\nVerification: ");
     printf("Original and deserialized trees are %s\n",
-           (memcmp(root, deserialized, sizeof(struct Node)) == 0) ? "identical" : "different");
+           areIdentical(root, deserialized) ? "identical" : "different");
     
     freeTree(root);
     freeTree(deserialized);
